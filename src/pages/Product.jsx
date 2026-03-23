@@ -62,20 +62,7 @@ const PRODUCTS = {
     { id: "af-8",  name: "17211-DOL110-H",       badge: "",            img: "/product/AIR-FILTER/8.png" },
 
   ],
-  "oil-strainer": [
-    { id: "os-1",  name: "MeshCraft SS-1",         badge: "Best Seller", img: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=700&q=85" },
-    { id: "os-2",  name: "PickupPro MT-2",         badge: "",            img: "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?w=700&q=85" },
-    { id: "os-3",  name: "FineMesh Ultra",         badge: "New",         img: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=700&q=85" },
-    { id: "os-4",  name: "BypassGuard BV",         badge: "",            img: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=700&q=85" },
-    { id: "os-5",  name: "InlineFlow IO7",         badge: "Sale",        img: "https://images.unsplash.com/photo-1504276048855-f3d60e69632f?w=700&q=85" },
-    { id: "os-6",  name: "MagnaPure MG8",          badge: "",            img: "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=700&q=85" },
-    { id: "os-7",  name: "OEM StrainComp",         badge: "Pro",         img: "https://images.unsplash.com/photo-1599912027611-484b9fc447af?w=700&q=85" },
-    { id: "os-8",  name: "SportStrain SP10",       badge: "",            img: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=85" },
-    { id: "os-9",  name: "LowPro LP11",            badge: "Best Seller", img: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=700&q=85" },
-    { id: "os-10", name: "DieselSieve DS12",       badge: "",            img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85" },
-    { id: "os-11", name: "UltraNet UN13",          badge: "New",         img: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=700&q=85" },
-    { id: "os-12", name: "CoreStrain X",           badge: "",            img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=700&q=85" },
-  ],
+
   "foam-filter": [
     { id: "ff-1",  name: "17211-DOL900-F",          badge: "Best Seller", img: "/product/FORM-FILTER/23.png" },
     { id: "ff-2",  name: "17211-DOL901-F",         badge: "",            img: "/product/FORM-FILTER/24.png" },

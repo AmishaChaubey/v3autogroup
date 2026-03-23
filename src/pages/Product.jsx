@@ -38,32 +38,59 @@ const CATEGORIES = [
   },
 ];
 
-const IMGS = {
-  "oil-filter":   ["https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=700&q=85","https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700&q=85","https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=700&q=85","https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85"],
-  "air-filter":   ["https://images.unsplash.com/photo-1581093196867-ca3b95030bb5?w=700&q=85","https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=700&q=85","https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?w=700&q=85","https://images.unsplash.com/photo-1504222490345-c075b7c1809b?w=700&q=85"],
-  "oil-strainer": ["https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=700&q=85","https://images.unsplash.com/photo-1614624532983-4ce03382d63d?w=700&q=85","https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=700&q=85","https://images.unsplash.com/photo-1504222490345-c075b7c1809b?w=700&q=85"],
-  "foam-filter":  ["https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=700&q=85","https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=85","https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=700&q=85","https://images.unsplash.com/photo-1540397106260-e24a507a08ea?w=700&q=85"],
+// ── UNIQUE PRODUCTS per category (each has its own image + unique name) ──
+const PRODUCTS = {
+  "oil-filter": [
+    { id: "of-1",  name: "17211-DOL958-O",   badge: "Best Seller", img: "/product/OIL-FILTER/35.png" },
+    { id: "of-2",  name: "17211-DOL949-O",        badge: "",            img: "/product/OIL-FILTER/36.png" },
+    { id: "of-3",  name: "17211-DOL950-O",          badge: "New",         img: "/product/OIL-FILTER/37.png" },
+    { id: "of-4",  name: "17211-DOL951-O",         badge: "",            img: "/product/OIL-FILTER/38.png" },
+    { id: "of-5",  name: "17211-DOL952-O",            badge: "Sale",        img: "/product/OIL-FILTER/39.png" },
+    { id: "of-6",  name: "17211-DOL953-O ",            badge: "",            img: "/product/OIL-FILTER/40.png" },
+    { id: "of-7",  name: "17211-DOL954-O",        badge: "Pro",         img: "/product/OIL-FILTER/41.png" },
+    { id: "of-8",  name: "17211-DOL955-O",         badge: "",            img: "/product/OIL-FILTER/42.png" },
+  
+  ],
+  "air-filter": [
+    { id: "af-1",  name: "17211-DOL100-H",    badge: "", img: "/product/AIR-FILTER/1.png" },
+    { id: "af-2",  name: "17211-DOL101-H",        badge: "",            img: "/product/AIR-FILTER/2.png" },
+    { id: "af-3",  name: "17211-DOL103-H ",        badge: "New",         img: "/product/AIR-FILTER/3.png" },
+    { id: "af-4",  name: "17211-DOL104-H",        badge: "",            img: "/product/AIR-FILTER/4.png" },
+    { id: "af-5",  name: "17211-DOL105-H",      badge: "Sale",        img: "/product/AIR-FILTER/5.png" },
+    { id: "af-6",  name: "17211-DOL106-H",         badge: "",            img: "/product/AIR-FILTER/6.png" },
+    { id: "af-7",  name: "17211-DOL107-H",    badge: "Pro",         img: "/product/AIR-FILTER/7.png" },
+    { id: "af-8",  name: "17211-DOL110-H",       badge: "",            img: "/product/AIR-FILTER/8.png" },
+
+  ],
+  "oil-strainer": [
+    { id: "os-1",  name: "MeshCraft SS-1",         badge: "Best Seller", img: "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=700&q=85" },
+    { id: "os-2",  name: "PickupPro MT-2",         badge: "",            img: "https://images.unsplash.com/photo-1614624532983-4ce03382d63d?w=700&q=85" },
+    { id: "os-3",  name: "FineMesh Ultra",         badge: "New",         img: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=700&q=85" },
+    { id: "os-4",  name: "BypassGuard BV",         badge: "",            img: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=700&q=85" },
+    { id: "os-5",  name: "InlineFlow IO7",         badge: "Sale",        img: "https://images.unsplash.com/photo-1504276048855-f3d60e69632f?w=700&q=85" },
+    { id: "os-6",  name: "MagnaPure MG8",          badge: "",            img: "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=700&q=85" },
+    { id: "os-7",  name: "OEM StrainComp",         badge: "Pro",         img: "https://images.unsplash.com/photo-1599912027611-484b9fc447af?w=700&q=85" },
+    { id: "os-8",  name: "SportStrain SP10",       badge: "",            img: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=85" },
+    { id: "os-9",  name: "LowPro LP11",            badge: "Best Seller", img: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=700&q=85" },
+    { id: "os-10", name: "DieselSieve DS12",       badge: "",            img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85" },
+    { id: "os-11", name: "UltraNet UN13",          badge: "New",         img: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=700&q=85" },
+    { id: "os-12", name: "CoreStrain X",           badge: "",            img: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=700&q=85" },
+  ],
+  "foam-filter": [
+    { id: "ff-1",  name: "17211-DOL900-F",          badge: "Best Seller", img: "/product/FORM-FILTER/23.png" },
+    { id: "ff-2",  name: "17211-DOL901-F",         badge: "",            img: "/product/FORM-FILTER/24.png" },
+    { id: "ff-3",  name: "17211-DOL902-F",          badge: "New",         img: "/product/FORM-FILTER/25.png" },
+    { id: "ff-4",  name: "17211-DOL903-F ",            badge: "",            img: "/product/FORM-FILTER/26.png" },
+    { id: "ff-5",  name: "17211-DOL904-F ",            badge: "Sale",        img: "/product/FORM-FILTER/27.png" },
+    { id: "ff-6",  name: "17211-DOL905-F",          badge: "",            img: "/product/FORM-FILTER/28.png" },
+    { id: "ff-7",  name: "17211-DOL906-F",          badge: "Pro",         img: "/product/FORM-FILTER/29.png" },
+    { id: "ff-8",  name: "17211-DOL907-F",          badge: "",            img: "/product/FORM-FILTER/30.png" },
+    
+  ],
 };
 
-const NAMES = {
-  "oil-filter":   ["VortexGuard Premium","TurboShield Pro","HexCore Elite","SynthMax Ultra","DuraFlow X1","NanoSeal HD","PureOil Classic","SpeedShield R8","IronCast XT","OmegaFlow Plus","TriCore Select","ZeroWear OE","MaxLife Series","StealthOil Pro"],
-  "air-filter":   ["AeroClean Cold Flow","DustBarrier Max","TurboCone Sport","HEPA CabinGuard","BreatheFree Elite","CycloneAir Pro","FlowRider Universal","AtmoSeal Hi-Flow","SkyFlo Performance","CleanBreeze OEM","JetMesh Racing","CompactAir Lite","OffRoad StormFlo"],
-  "oil-strainer": ["MeshCraft SS-1","PickupPro MT-2","FineMesh Ultra","BypassGuard BV","InlineFlow IO7","MagnaPure MG8","OEM StrainComp","SportStrain SP10","LowPro LP11","DieselSieve DS12","UltraNet UN13","CoreStrain X"],
-  "foam-filter":  ["OpenCell OC-1","DualLayer DL-2","PreOiled PO-3","MX RaceFoam","ATV ProFoam","TwinStage TS6","UniBreath UF7","HeavyDuty HD8","ReuseFlow RF9","SealedCore SF10","EnduroPore EP11","EcoLite EF12","TurboFoam TF13"],
-};
-
-const BADGES = ["","","Best Seller","New","","Sale","","Pro","",""];
 const BADGE_COLORS = { "Best Seller":"#f59e0b","New":"#10b981","Sale":"#ef4444","Pro":"#6366f1" };
 
-function buildProducts(id) {
-  return NAMES[id].map((name, i) => ({
-    id: `${id}-${i}`, name,
-    img: IMGS[id][i % IMGS[id].length],
-    badge: BADGES[i % BADGES.length],
-  }));
-}
-
-const ALL = Object.fromEntries(CATEGORIES.map(c => [c.id, buildProducts(c.id)]));
 const PER = 12;
 
 /* ── Card ── */
@@ -214,7 +241,7 @@ export default function FilterPage() {
   const isDesktop = bp === "xl";
 
   const cat      = CATEGORIES.find(c => c.id === active);
-  const rawProds = ALL[active] || [];
+  const rawProds = PRODUCTS[active] || [];
 
   const prods = useMemo(() => {
     const arr = [...rawProds];
@@ -235,9 +262,11 @@ export default function FilterPage() {
   const gridCols = isMobile ? "repeat(2,1fr)" : "repeat(3,1fr)";
   const cardGap  = isMobile ? 10 : 18;
   const bodyPad  = isMobile ? "16px 12px 48px" : isTablet ? "20px 16px 56px" : "32px 24px 64px";
-    useEffect(() => {
+
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap"/>
@@ -285,15 +314,6 @@ export default function FilterPage() {
           animation:slideIn .25s cubic-bezier(.22,.68,0,1.2);
         }
         @keyframes slideIn{from{transform:translateX(-100%)}to{transform:translateX(0)}}
-
-        .cat-tabs{
-          display:flex;gap:8px;padding:10px 12px;
-          overflow-x:auto;background:#fff;
-          border-bottom:1px solid #e8eef8;
-          scrollbar-width:none;
-        }
-        .cat-tabs::-webkit-scrollbar{display:none}
-        .cat-tabs button{flex-shrink:0}
 
         .sidebar-sticky{
           position:sticky;top:24px;
@@ -371,8 +391,6 @@ export default function FilterPage() {
             </span>
           </div>
         </div>
-
-     
 
         {/* ══ BODY ══ */}
         <div style={{

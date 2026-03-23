@@ -4,6 +4,8 @@ import {
   Shield, Truck, Award, ArrowRight, CheckCircle,
   Wrench, Car, Filter, Star, Settings, Zap, Menu, X
 } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const useInView = (threshold = 0.1) => {
   const ref = useRef(null);
@@ -55,7 +57,7 @@ const products = [
     icon: Filter, name: "Oil Strainer Filter", tagline: "First Defence. Zero Compromise.",
     desc: "Precision-stamped stainless mesh oil strainer designed to capture large particulate debris before it reaches sensitive engine components — the essential first line of defence.",
     features: ["Fine-mesh stainless steel screen", "Corrosion-resistant construction", "Maintains full oil flow rate", "Direct OEM replacement fit"],
-    image: "/product/oil-strainer.jpeg", badge: "New",
+    image: "https://i.pinimg.com/1200x/38/2b/ca/382bca77a74cfaecd7d70f10c2aac0f6.jpg", badge: "New",
     accent: "#2d3d8b", accentLight: "#eef1f9", num: "04",
   }
 ];
@@ -138,7 +140,7 @@ const ProductCard = ({ product, index }) => {
       <div style={{ padding: "22px 18px 18px", flex: 1, display: "flex", flexDirection: "column" }}>
         <p style={{ fontFamily: T.poppins, fontSize: 13, color: "#6b7280", lineHeight: 1.75, marginBottom: 18, flex: 1, fontWeight: 400 }}>{product.desc}</p>
         <div style={{ height: 1, background: "#f0f2f5", marginBottom: 14 }} />
-        <a href="#contact" style={{
+        <Link to="/product" style={{
           display: "flex", alignItems: "center", justifyContent: "space-between",
           padding: "11px 14px", borderRadius: 11, textDecoration: "none",
           background: hovered ? product.accent : product.accentLight,
@@ -157,7 +159,7 @@ const ProductCard = ({ product, index }) => {
           }}>
             <ArrowRight size={13} color={hovered ? "white" : product.accent} />
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -529,12 +531,12 @@ export default function App() {
           </p>
 
           <div className="hc hero-btns" style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 52 }}>
-            <a href="#products" className="btn-p" style={{ padding: "13px 26px", fontSize: "clamp(12px,1.5vw,13.5px)" }}>
+            <Link to="/product" className="btn-p" style={{ padding: "13px 26px", fontSize: "clamp(12px,1.5vw,13.5px)" }}>
               Explore Products <span className="arr"><ArrowRight size={16} /></span>
-            </a>
-            <a href="#contact" className="btn-g" style={{ padding: "12px 24px", fontSize: "clamp(12px,1.5vw,13.5px)" }}>
+            </Link>
+            <Link to="/contact" className="btn-g" style={{ padding: "12px 24px", fontSize: "clamp(12px,1.5vw,13.5px)" }}>
               Request Quote
-            </a>
+            </Link>
           </div>
 
           <div className="hst hero-stats">
@@ -606,10 +608,10 @@ export default function App() {
                 </div>
 
                 <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                  <a href="#products" className="btn-p" style={{ padding: "12px 24px", fontSize: 13 }}>
+                  <Link to="/product" className="btn-p" style={{ padding: "12px 24px", fontSize: 13 }}>
                     Our Products <span className="arr"><ArrowRight size={15} /></span>
-                  </a>
-                  <a href="#contact" style={{
+                  </Link>
+                  <Link to="/contact" style={{
                     display: "inline-flex", alignItems: "center", gap: 8,
                     padding: "11px 22px", borderRadius: 11, textDecoration: "none",
                     fontFamily: T.poppins, fontSize: 13, fontWeight: 600,
@@ -620,7 +622,7 @@ export default function App() {
                     onMouseLeave={e => { e.currentTarget.style.background = "#eef1f9"; }}
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </div>
               </div>
             </FadeUp>
@@ -668,9 +670,9 @@ export default function App() {
                 <p style={{ fontFamily: T.poppins, fontSize: "clamp(13px,1.4vw,14.5px)", color: "#6b7280", lineHeight: 1.8, fontWeight: 400 }}>
                   We deal in multiple ranges of automotive filters, auto spare parts, and accessories for the automotive industry — engineered for reliability, longevity, and compatibility across all major vehicle platforms.
                 </p>
-                <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 12, textDecoration: "none", fontFamily: T.poppins, fontSize: 13, fontWeight: 600, color: "#2d3d8b" }}>
+                <Link to="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 12, textDecoration: "none", fontFamily: T.poppins, fontSize: 13, fontWeight: 600, color: "#2d3d8b" }}>
                   Get a quote <ArrowRight size={14} />
-                </a>
+                </Link>
               </div>
             </div>
           </FadeUp>
@@ -817,10 +819,10 @@ export default function App() {
                   </div>
 
                   <div style={{ display: "flex", gap: 13, flexWrap: "wrap", alignItems: "center" }}>
-                    <a href="#contact" className="btn-p" style={{ padding: "14px 30px", fontSize: "clamp(12px,1.4vw,14px)" }}>
+                    <Link to="/contact" className="btn-p" style={{ padding: "14px 30px", fontSize: "clamp(12px,1.4vw,14px)" }}>
                       Get a Free Quote <span className="arr"><ArrowRight size={16} /></span>
-                    </a>
-                    <a href="tel:+919900000000" style={{ display: "inline-flex", alignItems: "center", gap: 9, fontFamily: T.poppins, fontSize: 13.5, fontWeight: 600, color: "rgba(255,255,255,0.65)", textDecoration: "none", transition: "color .2s" }}
+                    </Link>
+                    <Link to="tel:+919900000000" style={{ display: "inline-flex", alignItems: "center", gap: 9, fontFamily: T.poppins, fontSize: 13.5, fontWeight: 600, color: "rgba(255,255,255,0.65)", textDecoration: "none", transition: "color .2s" }}
                       onMouseEnter={e => (e.currentTarget.style.color = "white")}
                       onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.65)")}
                     >
@@ -828,7 +830,7 @@ export default function App() {
                         <Phone size={14} color="#4a96b6" />
                       </div>
                       +91 99XXXXXXXX
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

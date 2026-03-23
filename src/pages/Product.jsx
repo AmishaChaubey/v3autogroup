@@ -28,10 +28,7 @@ const CATEGORIES = [
     id: "air-filter", label: "Air Filter", sub: "Clean Airflow", count: 13,
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="18" height="18"><path d="M3 8h18M3 12h15a3 3 0 010 6H3M3 16h4"/><circle cx="19" cy="8" r="2"/></svg>,
   },
-  {
-    id: "oil-strainer", label: "Oil Strainer", sub: "Particle Removal", count: 12,
-    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="18" height="18"><rect x="3" y="3" width="18" height="4" rx="1"/><path d="M5 7l2 14h10l2-14M9 11h6M10 15h4"/></svg>,
-  },
+  
   {
     id: "foam-filter", label: "Foam Filter", sub: "Multi-Stage Media", count: 13,
     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="18" height="18"><rect x="3" y="6" width="18" height="12" rx="3"/><circle cx="9" cy="12" r="1.3" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1.3" fill="currentColor" stroke="none"/><circle cx="12" cy="9" r="1.3" fill="currentColor" stroke="none"/><circle cx="12" cy="15" r="1.3" fill="currentColor" stroke="none"/></svg>,

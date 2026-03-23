@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ArrowRight, Zap, Phone, Mail, MapPin } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const T = { cinzel: "'Cinzel', serif", poppins: "'Poppins', sans-serif" };
 
 export default function Footer() {
@@ -108,7 +108,7 @@ export default function Footer() {
             {/* ── Brand column ── */}
             <div>
               {/* Logo — falls back to text if image missing */}
-              <a href="#home" style={{ display: "inline-flex", alignItems: "center", gap: 10, textDecoration: "none", marginBottom: 20 }}>
+              <Link to ="#home" style={{ display: "inline-flex", alignItems: "center", gap: 10, textDecoration: "none", marginBottom: 20 }}>
                 <img
                   src="/logo5/1.png"
                   alt="V3 Auto Group"
@@ -116,7 +116,7 @@ export default function Footer() {
                   onError={e => { e.currentTarget.style.display = "none"; }}
                 />
              
-              </a>
+              </Link>
 
               <p style={{ fontFamily: T.poppins, fontSize: 13.5, color: "rgba(255,255,255,0.38)", lineHeight: 1.85, maxWidth: 280, fontWeight: 400 }}>
                 Supplying premium automotive filtration solutions to workshops, dealerships, and fleet operators across India since 2009.
@@ -146,7 +146,7 @@ export default function Footer() {
                 { label: "Oil Strainer Filter", href: "/product" },
              
               ].map(({ label, href }) => (
-                <a key={label} href={href} className="footer-link">{label}</a>
+                <Link key={label} to={href} className="footer-link">{label}</Link>
               ))}
             </div>
 
@@ -160,7 +160,7 @@ export default function Footer() {
                 { label: "Founder", href:"/about"}
          
               ].map(({ label, href }) => (
-                <a key={label} href={href} className="footer-link">{label}</a>
+                <Link key={label} to={href} className="footer-link">{label}</Link>
               ))}
             </div>
 

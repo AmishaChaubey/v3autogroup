@@ -75,7 +75,7 @@ function Hero() {
             A decade of precision engineering — delivering quality automotive filtration solutions across India and beyond.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "clamp(8px,1.5vw,12px)" }}>
-            {[["10+", "Years"], ["10K+", "SKUs"], ["5+", "Countries"]].map(([v, l]) => (
+            {[["12+", "Years"], ["10K+", "SKUs"], ["5+", "Countries"]].map(([v, l]) => (
               <div key={l} style={{
                 display: "flex", alignItems: "center", gap: "clamp(6px,1vw,10px)",
                 background: "rgba(255,255,255,0.08)", backdropFilter: "blur(12px)",
@@ -238,7 +238,7 @@ function Founder() {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div ref={ref} className="fn-grid" style={{ boxShadow: "0 24px 80px rgba(32,61,139,0.13)", opacity: v ? 1 : 0, transform: v ? "none" : "translateY(32px)", transition: "all 0.9s ease" }}>
           <div style={{ position: "relative", minHeight: "clamp(280px,40vw,420px)" }}>
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=90&fit=crop&crop=face,top"
+            <img src="/founder.jpeg"
               alt="Founder" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(20,30,70,0.92) 0%, rgba(20,30,70,0.05) 45%)" }} />
             <div style={{ position: "absolute", bottom: 0, padding: "clamp(16px,2.5vw,24px) clamp(16px,2.5vw,28px)" }}>

@@ -540,7 +540,7 @@ export default function App() {
           </div>
 
           <div className="hst hero-stats">
-            {[["12+", "Years of Excellence"], ["50K+", "Filters Delivered"], ["200+", "Vehicle Brands"], ["99%", "Client Satisfaction"]].map(([v, l]) => (
+            {[["12+", "Years of Excellence"], ["3L/monthly", "Filters Delivered"], ["200+", "Vehicle Brands"], ["99%", "Client Satisfaction"]].map(([v, l]) => (
               <div key={l} className="hero-stat-item">
                 <div style={{ fontFamily: T.poppins, fontSize: "clamp(22px,4vw,40px)", fontWeight: 700, color: "white", lineHeight: 1 }}>{v}</div>
                 <div style={{ fontFamily: T.poppins, fontSize: "clamp(9px,1.2vw,10.5px)", color: "rgba(255,255,255,0.32)", textTransform: "uppercase", letterSpacing: "1.5px", marginTop: 5, fontWeight: 500 }}>{l}</div>
@@ -703,7 +703,7 @@ export default function App() {
           <div className="stats-grid">
             {[
               { value: "12+", label: "Years of Excellence", icon: Star },
-              { value: "50K+", label: "Filters Supplied", icon: Filter },
+              { value: "3L/monthly", label: "Filters Supplied", icon: Filter },
               { value: "200+", label: "Vehicle Brands", icon: Car },
               { value: "99%", label: "Client Satisfaction", icon: Award },
             ].map((s, i) => (
@@ -829,7 +829,7 @@ export default function App() {
                       <div style={{ width: 36, height: 36, borderRadius: "50%", background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <Phone size={14} color="#4a96b6" />
                       </div>
-                      +91 99XXXXXXXX
+                      +91 9810309603
                     </Link>
                   </div>
                 </div>
@@ -837,8 +837,8 @@ export default function App() {
                 {/* Right stat cards */}
                 <div className="cta-stats-row" style={{ display: "flex", flexDirection: "column", gap: 12, minWidth: 210 }}>
                   {[
-                    { val: "500+", label: "Active Partners", icon: Star },
-                    { val: "50K+", label: "Filters Delivered", icon: Filter },
+                    { val: "10+", label: "Active Partners", icon: Star },
+                    { val: "3L/monthly", label: "Filters Delivered", icon: Filter },
                     { val: "24hr", label: "Quote Response", icon: Zap },
                   ].map(({ val, label, icon: Icon }) => (
                     <div key={label} className="cta-stat-card" style={{ display: "flex", alignItems: "center", gap: 14, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 14, padding: "15px 18px", backdropFilter: "blur(10px)" }}>
@@ -885,9 +885,9 @@ export default function App() {
                     Available 6 days a week to assist with any enquiry.
                   </p>
                   {[
-                    { icon: Phone, label: "Phone", value: "+91 99XXXXXXXX" },
+                    { icon: Phone, label: "Phone", value: "+91 9810309603" },
                     { icon: Mail, label: "Email", value: "v3auto@gmail.com" },
-                    { icon: MapPin, label: "Address", value: "Industrial Area, Phase 2\nNew Delhi – 110020" }
+                    { icon: MapPin, label: "Address", value: "V3 AUTO COMPONENTS INDIA PVT LTD.PLOT.NO.40, POCKET-H, SECTOR-5\nDSIIDC BAWANA INDUSTRIAL AREA DELHI 110039" }
                   ].map(({ icon: Icon, label, value }, idx) => (
                     <div key={label} style={{ display: "flex", gap: 12, marginBottom: idx < 2 ? 16 : 0, paddingBottom: idx < 2 ? 16 : 0, borderBottom: idx < 2 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
                       <div style={{ width: 36, height: 36, background: "rgba(74,150,182,0.14)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, border: "1px solid rgba(74,150,182,0.22)" }}>

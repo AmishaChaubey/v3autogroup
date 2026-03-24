@@ -110,9 +110,9 @@ export default function Footer() {
               {/* Logo — falls back to text if image missing */}
               <Link to ="#home" style={{ display: "inline-flex", alignItems: "center", gap: 10, textDecoration: "none", marginBottom: 20 }}>
                 <img
-                  src="/logo5/1.png"
+                  src="/logo8.png"
                   alt="V3 Auto Group"
-                  style={{ height: 36, width: "auto", objectFit: "contain" }}
+                  style={{ height: 86, width: "auto", objectFit: "contain" }}
                   onError={e => { e.currentTarget.style.display = "none"; }}
                 />
              
@@ -199,12 +199,12 @@ export default function Footer() {
               <div style={{ marginTop: 28 }}>
                 <div className="footer-col-head" style={{ marginBottom: 16 }}>Contact</div>
                 {[
-                  { icon: Phone, text: "+91 99XXXXXXXX" },
+                  { icon: Phone, text: "+91 9810309603" },
                   { icon: Mail, text: "v3auto@gmail.com " },
-                  { icon: MapPin, text: "New Delhi – 110020" },
+                  { icon: MapPin, text: "V3 AUTO COMPONENTS INDIA PVT LTD.PLOT.NO.40, POCKET-H, SECTOR-5 DSIIDC BAWANA INDUSTRIAL AREA DELHI 110039" },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 11 }}>
-                    <Icon size={13} color="rgba(74,150,182,0.7)" strokeWidth={1.8} />
+                    
                     <span style={{ fontFamily: T.poppins, fontSize: 13, color: "rgba(255,255,255,0.38)", fontWeight: 400 }}>{text}</span>
                   </div>
                 ))}

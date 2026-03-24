@@ -55,9 +55,9 @@ const ContactSection = () => {
   }, []);
 
   const infoItems = [
-    { title:"Office Address", value:"Plot No. 45, Industrial Area,\nPhase II, Noida, UP – 201301", Icon: MapPin },
-    { title:"Phone & WhatsApp", value:"+91 98765 43210\n+91 91234 56789", Icon: Phone },
-    { title:"Email", value:"v3auto@gmail.com \nsupport@v3autogroup.com", Icon: Mail },
+    { title:"Office Address", value:"V3 AUTO COMPONENTS INDIA PVT LTD.PLOT.NO.40, POCKET-H, SECTOR-5 \nDSIIDC BAWANA INDUSTRIAL AREA DELHI 110039", Icon: MapPin },
+    { title:"Phone & WhatsApp", value:"+91 9810309603\n+91 9810309603", Icon: Phone },
+    { title:"Email", value:"v3auto@gmail.com \nv3auto.sujitmd25@gmail.com ", Icon: Mail },
     { title:"Office Hours", value:"Mon – Fri: 9AM – 7PM\nSat: 10AM – 5PM  |  Sun: Closed", Icon: Clock },
   ];
   const inp = { width:"100%", boxSizing:"border-box", border:"1.5px solid #dbeafe", borderRadius:10, padding:"12px 14px", fontFamily:"'Poppins',sans-serif", fontSize:14, color:"#1e293b", background:"#f8faff", outline:"none" };
@@ -153,7 +153,7 @@ const ContactSection = () => {
               <p style={{ fontFamily:"'Poppins',sans-serif", fontSize:12, color:"#94a3b8", margin:"0 0 28px" }}>We'll get back to you within 24 hours.</p>
               <form onSubmit={handleSubmit}>
                 <div className="form-input-grid">
-                  {[{label:"Full Name",key:"name",type:"text",ph:"John Doe"},{label:"Email",key:"email",type:"email",ph:"john@example.com"},{label:"Phone",key:"phone",type:"tel",ph:"+91 98765 43210"},{label:"Subject",key:"subject",type:"text",ph:"Filter Inquiry"}].map(({label,key,type,ph})=>(
+                  {[{label:"Full Name",key:"name",type:"text",ph:"John Doe"},{label:"Email",key:"email",type:"email",ph:"john@example.com"},{label:"Phone",key:"phone",type:"tel",ph:"9810309603"},{label:"Subject",key:"subject",type:"text",ph:"Filter Inquiry"}].map(({label,key,type,ph})=>(
                     <div key={key}><label style={lbl}>{label}</label>
                     <input type={type} value={form[key]} placeholder={ph} required={key!=="phone"}
                       onChange={e=>setForm({...form,[key]:e.target.value})} style={inp}

@@ -171,10 +171,10 @@ const css = `
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
   *, *::before, *::after { box-sizing: border-box; }
   :root {
-    --nav-h: clamp(56px, 8vw, 70px);
+    --nav-h: clamp(56px, 9vw, 70px);
     --nav-h-scrolled: clamp(46px, 6vw, 58px);
-    --logo-h: clamp(30px, 5vw, 46px);
-    --logo-h-scrolled: clamp(24px, 4vw, 38px);
+    --logo-h: clamp(30px, 12vw, 46px);
+    --logo-h-scrolled: clamp(24px, 8vw, 38px);
     --link-fs: clamp(12px, 1.2vw, 14px);
     --cta-fs: clamp(11px, 1.1vw, 13.5px);
     --cta-px: clamp(12px, 1.8vw, 20px);
@@ -319,7 +319,7 @@ export default function Navbar() {
 
           <Link to="/" className="v3-logo">
             {!imgError ? (
-              <img src="/logo4.png" alt="V3 Auto Group" onError={() => setImgError(true)} />
+              <img src="/logo7.png" alt="V3 Auto Group" onError={() => setImgError(true)} />
             ) : (
               <span className="v3-logo-fallback">V3 Auto Group</span>
             )}

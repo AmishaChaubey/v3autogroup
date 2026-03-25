@@ -171,10 +171,10 @@ const css = `
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
   *, *::before, *::after { box-sizing: border-box; }
   :root {
-    --nav-h: clamp(56px, 9vw, 70px);
-    --nav-h-scrolled: clamp(46px, 6vw, 58px);
-    --logo-h: clamp(30px, 12vw, 46px);
-    --logo-h-scrolled: clamp(24px, 8vw, 38px);
+    --nav-h: clamp(64px, 10vw, 80px);
+    --nav-h-scrolled: clamp(52px, 7vw, 66px);
+    --logo-h: clamp(44px, 9vw, 64px);
+    --logo-h-scrolled: clamp(36px, 8vw, 54px);
     --link-fs: clamp(12px, 1.2vw, 14px);
     --cta-fs: clamp(11px, 1.1vw, 13.5px);
     --cta-px: clamp(12px, 1.8vw, 20px);
@@ -235,13 +235,54 @@ const css = `
   .v3-drawer-foot { padding:clamp(12px,2.5vw,16px) clamp(14px,3vw,20px) clamp(20px,5vw,28px); border-top:1px solid var(--border); }
   .v3-drawer-cta { display:flex; align-items:center; justify-content:center; gap:8px; font-family:'DM Sans',sans-serif; font-size:clamp(13px,3.5vw,14px); font-weight:600; color:#fff; background:var(--brand); border:none; cursor:pointer; width:100%; padding:clamp(12px,3vw,14px) 20px; border-radius:10px; transition:background 0.25s, box-shadow 0.25s; }
   .v3-drawer-cta:hover { background:#3a4fa8; box-shadow:0 6px 20px rgba(45,61,139,0.25); }
-  @media(min-width:1280px){ :root{--link-fs:14px;--cta-fs:13.5px;} }
-  @media(max-width:1279px) and (min-width:1025px){ :root{--link-fs:13px;--cta-fs:12.5px;--cta-px:16px;} .v3-nav-link{padding:7px 11px;} }
-  @media(max-width:1024px) and (min-width:769px){ :root{--link-fs:12.5px;--cta-fs:12px;--cta-px:13px;--cta-py:8px;} .v3-nav-link{padding:6px 10px;} .v3-sep{margin:0 4px;} }
-  @media(max-width:768px){ .v3-right{display:none !important;} .v3-ham{display:flex;} }
-  @media(max-width:480px){ :root{--nav-h:52px;--nav-h-scrolled:44px;--logo-h:28px;--logo-h-scrolled:22px;} .v3-nav-bar{padding:0 14px;gap:8px;} .v3-logo-fallback{font-size:14px;} .v3-ham{width:34px;height:34px;} .v3-drawer-link{font-size:14px;padding:12px;} .v3-drawer-cta{font-size:13px;padding:12px 16px;} }
-  @media(max-width:360px){ :root{--nav-h:48px;--logo-h:26px;} .v3-nav-bar{padding:0 12px;} .v3-logo-fallback{font-size:13px;} .v3-ham{width:32px;height:32px;border-radius:8px;} .v3-drawer-link{padding:11px 10px;font-size:13.5px;} .v3-drawer-cta{font-size:12.5px;} }
-  @media(min-width:1920px){ :root{--link-fs:15px;--cta-fs:14px;} .v3-nav-bar{max-width:1600px;} .v3-nav-link{padding:9px 17px;} .v3-cta{padding:11px 24px;border-radius:12px;} }
+
+  /* ── LOGO SIZE: All breakpoints ── */
+  /* Default (desktop ≥ 1280px) */
+  @media(min-width:1280px){
+    :root { --nav-h:82px; --nav-h-scrolled:68px; --logo-h:64px; --logo-h-scrolled:54px; --link-fs:14px; --cta-fs:13.5px; }
+  }
+  /* Large desktop 1025–1279px */
+  @media(max-width:1279px) and (min-width:1025px){
+    :root { --nav-h:76px; --nav-h-scrolled:62px; --logo-h:58px; --logo-h-scrolled:48px; --link-fs:13px; --cta-fs:12.5px; --cta-px:16px; }
+    .v3-nav-link { padding:7px 11px; }
+  }
+  /* Tablet landscape 769–1024px */
+  @media(max-width:1024px) and (min-width:769px){
+    :root { --nav-h:70px; --nav-h-scrolled:58px; --logo-h:52px; --logo-h-scrolled:42px; --link-fs:12.5px; --cta-fs:12px; --cta-px:13px; --cta-py:8px; }
+    .v3-nav-link { padding:6px 10px; }
+    .v3-sep { margin:0 4px; }
+  }
+  /* Mobile ≤ 768px */
+  @media(max-width:768px){
+    :root { --nav-h:68px; --nav-h-scrolled:56px; --logo-h:50px; --logo-h-scrolled:40px; }
+    .v3-right { display:none !important; }
+    .v3-ham { display:flex; }
+  }
+  /* Small mobile ≤ 480px */
+  @media(max-width:480px){
+    :root { --nav-h:60px; --nav-h-scrolled:50px; --logo-h:44px; --logo-h-scrolled:36px; }
+    .v3-nav-bar { padding:0 14px; gap:8px; }
+    .v3-logo-fallback { font-size:14px; }
+    .v3-ham { width:34px; height:34px; }
+    .v3-drawer-link { font-size:14px; padding:12px; }
+    .v3-drawer-cta { font-size:13px; padding:12px 16px; }
+  }
+  /* Extra small ≤ 360px */
+  @media(max-width:360px){
+    :root { --nav-h:54px; --nav-h-scrolled:46px; --logo-h:38px; --logo-h-scrolled:30px; }
+    .v3-nav-bar { padding:0 12px; }
+    .v3-logo-fallback { font-size:13px; }
+    .v3-ham { width:32px; height:32px; border-radius:8px; }
+    .v3-drawer-link { padding:11px 10px; font-size:13.5px; }
+    .v3-drawer-cta { font-size:12.5px; }
+  }
+  /* 4K / ultrawide ≥ 1920px */
+  @media(min-width:1920px){
+    :root { --nav-h:90px; --nav-h-scrolled:74px; --logo-h:72px; --logo-h-scrolled:60px; --link-fs:15px; --cta-fs:14px; }
+    .v3-nav-bar { max-width:1600px; }
+    .v3-nav-link { padding:9px 17px; }
+    .v3-cta { padding:11px 24px; border-radius:12px; }
+  }
 `;
 
 export default function Navbar() {
@@ -306,7 +347,6 @@ export default function Navbar() {
         </nav>
 
         <div className="v3-drawer-foot">
-          {/* Drawer CTA → popup */}
           <button className="v3-drawer-cta" onClick={openQuote}>
             Get a Quote <ArrowRight size={15} />
           </button>
@@ -319,7 +359,7 @@ export default function Navbar() {
 
           <Link to="/" className="v3-logo">
             {!imgError ? (
-              <img src="/logo7.png" alt="V3 Auto Group" onError={() => setImgError(true)} />
+              <img src="/logo9.png" alt="V3 Auto Group" onError={() => setImgError(true)} />
             ) : (
               <span className="v3-logo-fallback">V3 Auto Group</span>
             )}
@@ -334,7 +374,6 @@ export default function Navbar() {
               ))}
             </ul>
             <div className="v3-sep" />
-            {/* Desktop CTA → popup */}
             <button className="v3-cta" onClick={openQuote}>
               Get a Quote
               <ArrowRight size={14} className="v3-cta-icon" />

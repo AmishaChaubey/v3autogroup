@@ -110,7 +110,7 @@ export default function Footer() {
               {/* Logo — falls back to text if image missing */}
               <Link to ="#home" style={{ display: "inline-flex", alignItems: "center", gap: 10, textDecoration: "none", marginBottom: 20 }}>
                 <img
-                  src="/logo8.png"
+                  src="/footer.png"
                   alt="V3 Auto Group"
                   style={{ height: 86, width: "auto", objectFit: "contain" }}
                   onError={e => { e.currentTarget.style.display = "none"; }}

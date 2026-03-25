@@ -540,7 +540,7 @@ export default function App() {
           </div>
 
           <div className="hst hero-stats">
-            {[["12+", "Years of Excellence"], ["3L/monthly", "Filters Delivered"], ["200+", "Vehicle Brands"], ["99%", "Client Satisfaction"]].map(([v, l]) => (
+            {[["15+", "Years of Excellence"], ["3L/monthly", "Filters Delivered"], ["200+", "Vehicle Brands"], ["99%", "Client Satisfaction"]].map(([v, l]) => (
               <div key={l} className="hero-stat-item">
                 <div style={{ fontFamily: T.poppins, fontSize: "clamp(22px,4vw,40px)", fontWeight: 700, color: "white", lineHeight: 1 }}>{v}</div>
                 <div style={{ fontFamily: T.poppins, fontSize: "clamp(9px,1.2vw,10.5px)", color: "rgba(255,255,255,0.32)", textTransform: "uppercase", letterSpacing: "1.5px", marginTop: 5, fontWeight: 500 }}>{l}</div>
@@ -644,7 +644,7 @@ export default function App() {
                 }}>
                   <div style={{ fontFamily: T.poppins, fontSize: 10, color: "#4a96b6", textTransform: "uppercase", letterSpacing: "2px", fontWeight: 600, marginBottom: 5 }}>Est. Since</div>
                   <div style={{ fontFamily: T.cinzel, fontSize: "clamp(22px,3vw,28px)", fontWeight: 800, color: "#0a0f1e", lineHeight: 1 }}>2013</div>
-                  <div style={{ fontFamily: T.poppins, fontSize: 11.5, color: "#999", marginTop: 3, fontWeight: 400 }}>12+ Years of Trust</div>
+                  <div style={{ fontFamily: T.poppins, fontSize: 11.5, color: "#999", marginTop: 3, fontWeight: 400 }}>15+ Years of Trust</div>
                 </div>
            
               </div>
@@ -702,7 +702,7 @@ export default function App() {
         <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative" }}>
           <div className="stats-grid">
             {[
-              { value: "12+", label: "Years of Excellence", icon: Star },
+              { value: "15+", label: "Years of Excellence", icon: Star },
               { value: "3L/monthly", label: "Filters Supplied", icon: Filter },
               { value: "200+", label: "Vehicle Brands", icon: Car },
               { value: "99%", label: "Client Satisfaction", icon: Award },

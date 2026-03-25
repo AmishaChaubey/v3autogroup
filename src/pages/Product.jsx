@@ -361,7 +361,7 @@ export default function FilterPage() {
               fontSize: isMobile ? "1.75rem" : isTablet ? "2.8rem" : "3.8rem",
               fontWeight: 900, letterSpacing: "0.05em", lineHeight: 1.1, marginBottom: 14,
             }}>
-              Industrial Filter<br />Solutions
+              Automotive Filter<br />Solutions
             </h1>
 
             <p style={{
@@ -374,7 +374,7 @@ export default function FilterPage() {
             </p>
 
             <div style={{ display: "flex", gap: isMobile ? 20 : 32, flexWrap: "wrap", justifyContent: "center" }}>
-              {[["3L/monthly", "Products"], ["4", "Categories"], ["OEM", "Compatible"], ["ISO", "Certified"]].map(([v, l]) => (
+              {[["3L/monthly", "Products"], ["3", "Categories"], ["OEM", "Compatible"], ["ISO", "Certified"]].map(([v, l]) => (
                 <div key={l} style={{ textAlign: "center" }}>
                   <div style={{ fontFamily: "'Cinzel',serif", fontSize: isMobile ? 20 : 24, fontWeight: 900, color: "#7ecff0" }}>{v}</div>
                   <div style={{ fontSize: 8, color: "rgba(255,255,255,0.4)", letterSpacing: "0.18em", textTransform: "uppercase", marginTop: 3 }}>{l}</div>

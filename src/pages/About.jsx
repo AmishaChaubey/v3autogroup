@@ -75,7 +75,7 @@ function Hero() {
             A decade of precision engineering — delivering quality automotive filtration solutions across India and beyond.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "clamp(8px,1.5vw,12px)" }}>
-            {[["12+", "Years"], ["10K+", "SKUs"], ["5+", "Countries"]].map(([v, l]) => (
+            {[["15+", "Years"], ["10K+", "SKUs"], ["5+", "Countries"]].map(([v, l]) => (
               <div key={l} style={{
                 display: "flex", alignItems: "center", gap: "clamp(6px,1vw,10px)",
                 background: "rgba(255,255,255,0.08)", backdropFilter: "blur(12px)",
@@ -154,7 +154,7 @@ function About() {
                 style={{ width: "100%", aspectRatio: "4/3", objectFit: "cover", display: "block" }} />
             </div>
             <div className="ab-year-badge" style={{ background: NAVY, borderRadius: "clamp(10px,1.5vw,16px)", padding: "clamp(14px,2vw,20px) clamp(14px,2vw,22px)", boxShadow: "0 16px 48px rgba(32,61,139,0.35)" }}>
-              <p style={{ fontFamily: "'Cinzel',serif", color: "#fff", fontSize: "clamp(22px,3.5vw,32px)", fontWeight: 900, margin: 0, lineHeight: 1 }}>10<span style={{ color: TEAL }}>+</span></p>
+              <p style={{ fontFamily: "'Cinzel',serif", color: "#fff", fontSize: "clamp(22px,3.5vw,32px)", fontWeight: 900, margin: 0, lineHeight: 1 }}>15<span style={{ color: TEAL }}>+</span></p>
               <p style={{ fontFamily: "'Poppins',sans-serif", color: "rgba(255,255,255,0.6)", fontSize: "clamp(8px,1vw,10px)", letterSpacing: "0.2em", margin: "6px 0 0", textTransform: "uppercase" }}>Years</p>
             </div>
           </div>
